@@ -1,0 +1,224 @@
+html,body{
+    overflow: hidden;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#camera--output{
+    display: none;
+}
+
+#title{
+    float: right;
+    margin-right: 3%;
+}
+
+#annotate {
+    float: right;
+}
+
+#annotate-button{
+    float: right;
+    padding: 3%;
+    clear: both;
+    margin-top: -26px;
+    background-color: #e2e2e2;
+    border-radius: 6px;
+}
+
+#glabel{
+    padding: 5%;
+    border-bottom: 2px solid #e5e4e4;
+    font-weight: 800;
+}
+
+.label_box{
+    position: fixed;
+    bottom: 0;
+    /* padding: 3%; */
+    width: 100%;
+    box-shadow: 0px 2px 15px 5px #838383;
+    font-family: 'Montserrat';
+    /* padding-left: 4%; */
+    height: 8%;
+    opacity: 1;
+    background-color:white;
+    transition:0.4s;
+    z-index:1000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#save_btn{
+    outline: #3bd100;
+    border-color: #31ab00;
+    width: 73%;
+    margin-left: 5%;
+    padding: 4%;
+    margin-top: 3%;
+    background-color: #03dd00;
+    text-align: center;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 0.9em;
+    font-family: 'Montserrat';
+    outline: none;
+}
+
+#del_btn{
+    width: 6%;
+    margin-left: 2%;
+    padding: 4%;
+    margin-top: 3%;
+    background-color: #ff0000;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    font-size: 1.3em;
+}
+
+#camera--header{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    height: 0%;
+    padding: 7%;
+    padding-bottom: 13%;
+    display: inline-block;
+    font-weight: 800;
+    width: 89vw;    
+    background-color: white;
+    box-shadow: 0px 2px 25px #d8d6d6;
+}
+
+#arrowoicon{
+    transition:0.7s;
+}
+
+.select2-container{
+    padding: 5% !important;
+    width: 100% !important;
+    padding-bottom: 0 !important;
+    padding-top: 2% !important;
+}
+
+#icon_exp{
+    float: right;
+    border-radius: 45px;
+    padding: 8px;
+    padding-right: 10px;
+    clear: both;
+    margin-top: -2%;
+    background-color: #f5f5f5;
+}
+
+/* #camera--header{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    height: 0%;
+    padding: 7%;
+    padding-bottom: 13%;
+    font-weight: 800;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 2px 25px #d8d6d6;
+} */
+
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#camera--view, #camera--sensor, #camera--output{
+    transform: scaleX(1);
+}
+
+#shutter_holder{
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+}
+
+#shutter_holder img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+}
+
+#camera--trigger{
+    width: 18%;
+    background-color: white;
+    box-shadow: 0px 2px 25px #c1c1c1;
+    border-radius: 100px;
+}
+
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 15%;
+    right: 20px;
+    z-index: 2;
+}
+
+#img_thumbnails {
+    width: 100%;
+    height: 55px;
+    margin: 3%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
+    padding-bottom: 5%;
+    margin-bottom: 0;
+}
+
+.imgthumb{
+    width: 50;
+    border-radius: 8px;
+    height: 50;
+    box-shadow: 0px 2px 2px 2px #e2e2e2;
+    display: inline-block;
+    margin-right: 5px;
+    transition:0.2s;
+}
+
+.select2-selection{
+    border: none;
+    border: 1px solid #b5b5b5 !important;
+    border-radius: 7px;
+    min-height: 47px !important;
+    height: 47px;
+    font-size: 1.4em;
+    padding: 1%;
+    padding-left:1%;
+    overflow: scroll;
+    padding-bottom: 3% !important;
+}
+
+.select2-dropdown{
+    font-family: 'Montserrat';
+    border: 2px solid #e2e2e2;
+    width: 100%;
+}
+
+.select2-selection__choice{
+    background-color:white !important;
+    border:None;
+    padding-bottom: 4px !important;
+    padding-top: 2px !important;
+    padding-right: 3px !important;
+    margin-top: 0px !important;
+}
+.select2-selection__choice__remove{
+    border:None !important;
+}
+
+.select2-search__field{
+    height:100% !important;
+}
