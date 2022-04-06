@@ -210,10 +210,12 @@ function showLayer(layer) {
       cachedMarkers[layer] = layerInfo;
 
       lyrMarkerCluster.addTo(theMap);
+
       currentLayerCount++;
       if (totalLayersSelected == currentLayerCount) {
         countVisibleMarkers(theMap);
       }
+      console.log(cachedMarkers);
     });
   }
 }
@@ -431,6 +433,7 @@ function reloadMap() {
       //console.log(layers);
 
       metaData = JSON.parse(JSON.stringify(layers));
+
       var filterDiv = document.createElement("div");
       filterDiv.id = "filter";
       filterDiv.className = "filter";
@@ -517,7 +520,7 @@ function getIcon(label, color) {
 reloadMap();
 
 function loadFaqQuestions() {
-  console.log(metaData["faqQuestions"]);
+  //console.log(metaData["faqQuestions"]);
   let faqFormat = metaData["faqQuestionFormat"];
   let count = 0;
   let htmlStringCol1 = "";
@@ -579,4 +582,13 @@ function openFaq() {
 
 function closeFaq() {
   document.getElementById("faqBar").style.width = "0";
+}
+
+// createIndex();
+
+function executeSearch() {
+  let product = document.getElementById("productId").value;
+  let payment = document.getElementById("cashId").value;
+  let marketName = document.getElementById("marketName").value;
+  searchData({ product: product, payment: payment, marketName: marketName });
 }

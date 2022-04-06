@@ -122,8 +122,59 @@
                </span>
             </div>
              <form id="search-box" class="form-inline" style="width: 40% ;float:right">
-    <input class="form-control mr-sm-2" type="search" placeholder="Start searching with keyword" aria-label="Search">
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Start searching with keyword" aria-label="Search"> -->
+  <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+ Click to Search
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Search by providing inputs</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+   <div class="container">
+  <!-- <div class="row">
+    <div class="col">
+
+  <input type="text" class="form-control form-control-md" id="productId" placeholder="Product" style="width:100%">
+
+    </div>
+    <div class="col">
+         <input type="text" class="form-control form-control-md" id="cashId" placeholder="Cash" style="width:100%">
+
+    </div>
+  </div>
+<br/> -->
+  <div class="row">
+    <div class="col">
+          <input type="text" class="form-control form-control-md" id="searchText" placeholder="Start searching" style="width:100%" onkeyup="isButtonDisable()">
+
+    </div>
+  
+  </div>
+
+</div>
+
+
+
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" id="searchButton" class="btn btn-primary" onclick=executeSearch() disabled >Search</button>
+      </div>
+    </div>
+  </div>
+</div>
   </form>
+
+
+ 
 
             <div id="row-faq" style="width: 2%; float:right;" >  <span  style= "cursor: pointer;" onclick="openFaq()"><img id="faq-image" src="assets/lib/images/faq.svg"> </span></div>
             <!-- <div  style= "font-size: 20px;
@@ -224,9 +275,11 @@
    crossorigin=""
    ></script>
    <script type="text/javascript" src={{"assets/lib/jquery-3.6.0.min.js" | relative_url}}></script>
-   <script type="text/javascript" src={{"assets/lib/bootstrap.min.js" | relative_url}}></script>
-   <script src={{"assets/lib/leaflet.markercluster.js" | relative_url}}></script>
-   <script src={{"assets/lib/charts.lib.js" | relative_url}}></script>
+   <script type="text/javascript" type="text/javascript" src={{"assets/lib/bootstrap.min.js" | relative_url}}></script>
+   <script type="text/javascript" src={{"assets/lib/leaflet.markercluster.js" | relative_url}}></script>
+   <script type="text/javascript" src={{"assets/lib/charts.lib.js" | relative_url}}></script>
+     <script type="text/javascript" src={{"assets/scripts/indexHelper.js" | relative_url}}></script>
+
    <script type="text/javascript" src={{"assets/scripts/helper.js" | relative_url}}></script>
    <script type="text/javascript" src={{"assets/scripts/pie-helper.js" | relative_url}}></script>
    <script type="text/javascript" src={{"assets/lib/plugins/leaflet.ajax.min.js"| relative_url}}></script>

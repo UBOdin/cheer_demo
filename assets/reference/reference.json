@@ -112,5 +112,11 @@
       "question": "This is the question 10",
       "answer": "This is the answer fot he question that needs to be replaces with original answer"
     }
-  ]
+  ],
+
+  "indexFiles": {
+    "AMS-USDA-Directories-FarmersMarkets.json": 1,
+    "AMS-USDA-Directories-Farms.json": 2,
+    "NYS-RetailFoodStores.json": 3
+  }
 }
